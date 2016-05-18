@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     padding: 5,
     flex: 1,
     flexDirection: 'row',
-    flexWrap: 'wrap'
   },
   action: {
     padding: 10
@@ -71,7 +70,6 @@ const styles = StyleSheet.create({
     padding: 5
   },
   wrapper: {
-    padding: 10,
     flexWrap: 'wrap'
   },
   desc: {
