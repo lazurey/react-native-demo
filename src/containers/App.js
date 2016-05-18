@@ -15,7 +15,7 @@ const state = {
 const initialState = Object.assign(state, global.__INITIAL_STATE__ || {})
 const store = configStore(initialState, reducers)
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
         <Provider store={ store }>
