@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 
 import nameList from './nameList'
+import facehubList from './facehubList'
 import user from './user'
 
 const pageDataReducer = combineReducers({
-  nameList
+  nameList,
+  facehubList
 })
 
 const sharedDataReducer = combineReducers({
