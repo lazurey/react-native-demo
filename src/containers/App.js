@@ -5,6 +5,7 @@ import reducers from '../reducers'
 import configStore from '../store/configStore'
 
 import AryaListPage from './AryaListPage'
+import FaceHub from './FaceHub'
 
 const state = {
   shared: {
@@ -19,7 +20,7 @@ class App extends Component {
   render() {
     return (
         <Provider store={ store }>
-          <AryaListPage />
+          <FaceHub />
         </Provider>
       )
   }
