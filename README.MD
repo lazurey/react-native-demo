@@ -2,5 +2,5 @@
 
 - [x] Redux
 - [ ] React Router
-- [ ] ESLint
+- [x] ESLint
 - [ ] Test
