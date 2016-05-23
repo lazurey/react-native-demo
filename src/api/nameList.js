@@ -16,6 +16,6 @@ const aryaList = [
 
 export default {
   loadNames: () => aryaList,
-  addName: (name) => aryaList.push({ name, reason: 'no reason', killed: false}),
-  killByName: (name) => aryaList
+  addName: (name) => aryaList.push({ name, reason: 'no reason', killed: false }),
+  killByName: (name) => aryaList.filter(person => person.name !== name)
 }

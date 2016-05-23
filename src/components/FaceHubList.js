@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import {
   StyleSheet,
   View,
-  Text,
   StatusBar,
   ListView
 } from 'react-native'
@@ -18,21 +17,21 @@ class FaceHubList extends Component {
   constructor() {
     super()
     StatusBar.setBarStyle('light-content')
-    this.dataSource = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2})
+    this.dataSource = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
   }
 
   render() {
     const { namelist } = this.props
-    const ds = this.dataSource.cloneWithRows(namelist);
+    const ds = this.dataSource.cloneWithRows(namelist)
     return (
-        <View style={ styles.container }>
-          <NavBar />
-          <ListView
-            dataSource={ ds }
-            renderRow={ person => <NameCard person={ person } /> }
-          />
-        </View>
-      )
+      <View style={styles.container}>
+        <NavBar />
+        <ListView
+          dataSource={ds}
+          renderRow={person => <NameCard person={person} />}
+        />
+      </View>
+    )
   }
 }
 

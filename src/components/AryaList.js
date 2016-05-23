@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import {
   Alert,
@@ -7,31 +7,37 @@ import {
   Text,
   StyleSheet,
   TouchableHighlight
-} from 'react-native';
+} from 'react-native'
 
 class AryaList extends Component {
+  static propTypes = {
+    nameList: PropTypes.array
+  }
+
   constructor(props) {
     super(props)
     this.state = {
-      ds: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
+      ds: new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
     }
   }
 
   _renderName(rowData) {
     return (
-      <View style={ styles.item }>
-        <View style={ styles.action }>
-          <TouchableHighlight style={ styles.kill } onPress={ () => Alert.alert('Kill him/her?', 'Are you sure he/she is dead?', [
-            { text: 'OK', onPress: () => console.log('remove from list') },
-            { text: 'Cancel', onPress: () => console.log('wrong touch') },
-          ]) }>
+      <View style={styles.item}>
+        <View style={styles.action}>
+          <TouchableHighlight
+            style={styles.kill}
+            onPress={() => Alert.alert('Kill him/her?', 'Are you sure he/she is dead?', [
+              { text: 'OK', onPress: () => 'okay' },
+              { text: 'Cancel', onPress: () => 'cancel' }])}
+          >
             <Text>Kill</Text>
           </TouchableHighlight>
         </View>
-        <View style={ styles.desc }>
-          <Text style={ styles.name }> {rowData.name } </Text>
-          <View style={ styles.wrapper }>
-            <Text style={ styles.reason } numberOfLines={ 2 }> {rowData.reason } </Text>
+        <View style={styles.desc}>
+          <Text style={styles.name}> {rowData.name} </Text>
+          <View style={styles.wrapper}>
+            <Text style={styles.reason} numberOfLines={2}> {rowData.reason} </Text>
           </View>
         </View>
       </View>
@@ -43,11 +49,11 @@ class AryaList extends Component {
     const aryaList = this.state.ds.cloneWithRows(nameList)
 
     return (
-        <ListView
-          dataSource={ aryaList }
-          renderRow={ this._renderName }
-        />
-      )
+      <ListView
+        dataSource={aryaList}
+        renderRow={this._renderName}
+      />
+    )
   }
 }
 
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     padding: 5,
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   action: {
     padding: 10
@@ -81,7 +87,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 16,
-    borderBottomWidth: 2,
+    borderBottomWidth: 2
   }
 })
 

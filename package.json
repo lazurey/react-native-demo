@@ -3,14 +3,25 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "eslint ./src",
+    "dev": "react-native run-ios"
   },
   "dependencies": {
+    "eslint": "^2.10.2",
+    "eslint-plugin-react": "^5.1.1",
+    "eslint-plugin-react-native": "^1.1.0-beta",
     "react": "^0.14.8",
     "react-native": "^0.25.1",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-actions": "^0.9.1",
     "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-jsx-a11y": "^1.2.2"
   }
 }

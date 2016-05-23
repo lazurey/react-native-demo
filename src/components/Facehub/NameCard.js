@@ -1,26 +1,28 @@
 import React, { Component, PropTypes } from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 
+const avatar = require('./panda.jpg')
+
 class NameCard extends Component {
   static propTypes = {
-    person: PropTypes.object.required
+    person: PropTypes.object
   }
 
   render() {
     const { person } = this.props
     return (
-        <View style={ [styles.card, styles.shadow] }>
-          <Image style={ styles.avatar } source={ require('./panda.jpg') } />
-          <View style={ styles.desc }>
-            <View style={ styles.header }>
-              <Text style={ styles.name }>{ person.name }</Text>
-              <Text style={ styles.location }>{ person.location }</Text>
-            </View>
-            <Text style={ styles.title }>{ person.title }</Text>
-            <Text style={ styles.email }>{ person.email }</Text>
+      <View style={[styles.card, styles.shadow]}>
+        <Image style={styles.avatar} source={avatar} />
+        <View style={styles.desc}>
+          <View style={styles.header}>
+            <Text style={styles.name}>{person.name}</Text>
+            <Text style={styles.location}>{person.location}</Text>
           </View>
+          <Text style={styles.title}>{person.title}</Text>
+          <Text style={styles.email}>{person.email}</Text>
         </View>
-      )
+      </View>
+    )
   }
 }
 

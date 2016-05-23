@@ -1,18 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
   StyleSheet,
   View,
   Text
 } from 'react-native'
 
-class NavBar extends Component {
-  render() {
-    return (
-        <View style={ styles.navBar }>
-          <Text style={ styles.navBarTitle }>ThoughtWorkers</Text>
-        </View>
-      )
-  }
+function NavBar() {
+  return (
+    <View style={styles.navBar}>
+      <Text style={styles.navBarTitle}>ThoughtWorkers</Text>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({

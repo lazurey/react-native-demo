@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -7,10 +7,6 @@ import AryaList from '../components/AryaList'
 import { loadNames } from '../actions/nameList'
 
 class AryaListPage extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   static propTypes = {
     nameList: PropTypes.array,
     actions: PropTypes.object
@@ -23,13 +19,13 @@ class AryaListPage extends Component {
   render() {
     const { nameList } = this.props
     return (
-        <View>
-          <View style={ styles.header }>
-            <Text style={ styles.title }>Arya's List</Text>
-          </View>
-          <AryaList nameList={ nameList } />
+      <View>
+        <View style={styles.header}>
+          <Text style={styles.title}>Arya's List</Text>
         </View>
-      )
+        <AryaList nameList={nameList} />
+      </View>
+    )
   }
 }
 

@@ -1,10 +1,9 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
 import { Provider } from 'react-redux'
 
 import reducers from '../reducers'
 import configStore from '../store/configStore'
 
-import AryaListPage from './AryaListPage'
 import FaceHub from './FaceHub'
 
 const state = {
@@ -13,17 +12,15 @@ const state = {
   }
 }
 
-const initialState = Object.assign(state, global.__INITIAL_STATE__ || {})
+const initialState = Object.assign(state, {})
 const store = configStore(initialState, reducers)
 
-class App extends Component {
-  render() {
-    return (
-        <Provider store={ store }>
-          <FaceHub />
-        </Provider>
-      )
-  }
+function App() {
+  return (
+    <Provider store={store}>
+      <FaceHub />
+    </Provider>
+  )
 }
 
 export default App
