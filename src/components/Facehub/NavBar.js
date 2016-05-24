@@ -5,6 +5,8 @@ import {
   Text
 } from 'react-native'
 
+import Colors from '../constants/Colors'
+
 function NavBar() {
   return (
     <View style={styles.navBar}>
@@ -15,12 +17,12 @@ function NavBar() {
 
 const styles = StyleSheet.create({
   navBar: {
-    backgroundColor: '#F50057',
+    backgroundColor: Colors.pink,
     height: 64,
     paddingTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor: 'black',
+    shadowColor: Colors.black,
     shadowOpacity: 0.2,
     shadowRadius: 2,
     shadowOffset: {
@@ -30,7 +32,7 @@ const styles = StyleSheet.create({
   },
   navBarTitle: {
     fontWeight: 'bold',
-    color: '#fff',
+    color: Colors.white,
     fontSize: 16
   }
 })

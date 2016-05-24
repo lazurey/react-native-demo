@@ -8,6 +8,7 @@ import {
 
 import NavBar from './Facehub/NavBar'
 import NameCard from './Facehub/NameCard'
+import Colors from './constants/Colors'
 
 class FaceHubList extends Component {
   static propTypes = {
@@ -38,7 +39,7 @@ class FaceHubList extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#eee'
+    backgroundColor: Colors.bgGray
   }
 })
 

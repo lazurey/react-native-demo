@@ -9,6 +9,8 @@ import {
   TouchableHighlight
 } from 'react-native'
 
+import Colors from './constants/Colors'
+
 class AryaList extends Component {
   static propTypes = {
     nameList: PropTypes.array
@@ -58,9 +60,6 @@ class AryaList extends Component {
 }
 
 const styles = StyleSheet.create({
-  list: {
-    textAlign: 'left'
-  },
   item: {
     marginBottom: 10,
     padding: 5,
@@ -72,7 +71,7 @@ const styles = StyleSheet.create({
   },
   kill: {
     borderWidth: 1,
-    borderColor: '#999',
+    borderColor: Colors.textGray,
     padding: 5
   },
   wrapper: {
@@ -82,7 +81,7 @@ const styles = StyleSheet.create({
   },
   reason: {
     fontSize: 12,
-    color: '#999',
+    color: Colors.textGray,
     flexWrap: 'wrap'
   },
   name: {

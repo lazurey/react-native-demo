@@ -21,9 +21,14 @@
     "no-underscore-dangle": ["error", { "allowAfterThis": true }],
     "object-curly-spacing": 1,
     "no-unused-vars": [2, { "args": "none" }],
-    "react/prefer-stateless-function": 1
+    "react/prefer-stateless-function": 1,
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 2
   },
   "plugins": [
-    "react"
+    "react",
+    "react-native"
   ]
 }

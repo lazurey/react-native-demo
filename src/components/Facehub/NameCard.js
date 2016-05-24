@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 
+import Colors from '../constants/Colors'
+
 const avatar = require('./panda.jpg')
 
 class NameCard extends Component {
@@ -28,7 +30,7 @@ class NameCard extends Component {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     padding: 10,
     margin: 10,
     borderRadius: 3,
@@ -49,21 +51,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   location: {
-    backgroundColor: '#F50057',
-    color: '#fff',
+    backgroundColor: Colors.pink,
+    color: Colors.white,
     fontSize: 10,
     padding: 2,
     borderRadius: 5,
     marginLeft: 10
   },
   title: {
-    color: '#666'
+    color: Colors.textGray
   },
   email: {
-    color: '#666'
+    color: Colors.textGray
   },
   shadow: {
-    shadowColor: 'black',
+    shadowColor: Colors.black,
     shadowOpacity: 0.2,
     shadowRadius: 2,
     shadowOffset: {
